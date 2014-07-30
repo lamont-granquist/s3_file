@@ -3,6 +3,8 @@ require 'rubocop/rake_task'
 require 'foodcritic'
 require 'kitchen'
 
+puts ENV['DIGITAL_OCEAN_SSH_KEY_IDS']
+
 # Style tests. Rubocop and Foodcritic
 namespace :style do
   desc 'Run Ruby style checks'
