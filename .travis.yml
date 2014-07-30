@@ -15,6 +15,7 @@ before_install:
 - echo $DIGITAL_OCEAN_API_KEY | md5sum -
 - echo $DIGITAL_OCEAN_SSH_KEY_IDS | md5sum -
 - echo $DIGITAL_OCEAN_SSH_KEY_PATH | md5sum -
+- env
 - ls -la ~/.ssh
 script:
 - bundle exec rake travis --trace
