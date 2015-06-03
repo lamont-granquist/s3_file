@@ -1,3 +1,5 @@
+AbcSize:
+  Enabled: false
 ClassLength:
   Enabled: false
 CommentAnnotation:
