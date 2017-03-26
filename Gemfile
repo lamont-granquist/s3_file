@@ -1,19 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'chef', '>= 11.16.4'
-gem 'foodcritic', '>= 4.0.0'
-gem 'rubocop', '~> 0.27.1'
-gem 'berkshelf', '>= 3.2.1'
-gem 'chefspec', '>= 4.2.0.beta.1'
-gem 'test-kitchen', '>= 1.2.1'
-gem 'aws-sdk'
-gem 'knife-spork', '>= 1.4.2'
-gem 'stove', '>= 3.2.3'
+gem 'chef', '>= 12.14.89'
+gem 'foodcritic', '>= 8.0.0'
+gem 'lcgstyle', '>= 0.0.3'
+gem 'berkshelf', '>= 5.1.0'
+gem 'chefspec', '>= 5.2.0'
+gem 'test-kitchen', '>= 1.13.2'
 
-group :kitchen_vagrant do
-  gem 'kitchen-vagrant', '>= 0.15.0'
-end
+gem 'kitchen-vagrant', '>= 0.20.0'
+gem 'kitchen-appbundle-updater', '>= 0.1.2'
+gem 'kitchen-dokken', '>= 1.0.1'
 
-gem 'kitchen-digitalocean'
-gem 'kitchen-ec2'
-gem 'rake'
+gem 'rake', '>= 11.3.0'
+
+gem 'knife-spork', '>= 1.6.2'
