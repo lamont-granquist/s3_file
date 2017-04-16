@@ -15,7 +15,7 @@ class S3UrlGenerator
 
     auth_string = 'AWS %s:%s' % [aws_access_key_id, signed_base64]
 
-    @url = 'https://%s.s3.amazonaws.com%s' % [bucket, path]
+    @url = 'https://s3.amazonaws.com/%s%s' % [bucket, path]
     @headers = { 'date' => now, 'authorization' => auth_string }
   end
 end
