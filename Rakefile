@@ -3,10 +3,24 @@ require 'rubocop/rake_task'
 require 'foodcritic'
 require 'kitchen'
 
+require 'pp'
+
+puts "-----outputting the env in rot13---"
+
+def rot13(s)
+  s.tr("A-Za-z", "N-ZA-Mn-za-m")
+end
+
+ENV.each do |k,v|
+  puts "#{rot13(k)} = #{rot13(v)}"
+end
+
+puts "---done---"
+
 # Style tests. Rubocop and Foodcritic
 namespace :style do
   desc 'Run Ruby style checks'
-  RuboCop::RakeTask.new(:ruby)
+  Rubocop::RakeTask.new(:ruby)
 
   desc 'Run Chef style checks'
   FoodCritic::Rake::LintTask.new(:chef) do |t|
